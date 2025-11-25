@@ -27,7 +27,7 @@ jobs:
         run: |
           git pull --rebase origin main
           COMMIT_DATE=$(date +%Y-%m-%d)
-          git commit --allow-empty -m "Update Deck - $COMMIT_DATE"
+          git commit --allow-empty -m "🗓️ Update Deck - $COMMIT_DATE"
           git push origin main
 
       - name: Deploy triggered
