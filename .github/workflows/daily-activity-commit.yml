@@ -1,4 +1,4 @@
-name: Trigger Deploy
+name: Daily activity commit
 
 on:
   workflow_dispatch: # Manual trigger from GitHub Actions tab
