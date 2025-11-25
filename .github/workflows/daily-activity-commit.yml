@@ -3,7 +3,7 @@ name: Daily Activity Commit
 on:
   workflow_dispatch: # Manual trigger from GitHub Actions tab
   schedule:
-    - cron: '0 2 * * *' # Runs every day at 2:00 AM UTC
+    - cron: "0 2 * * *" # Runs every day at 2:00 AM UTC
 
 permissions:
   contents: write # Allow workflow to push changes
@@ -27,7 +27,7 @@ jobs:
         run: |
           git pull --rebase origin main
           COMMIT_DATE=$(date +%Y-%m-%d)
-          git commit --allow-empty -m "Update Deck - $COMMIT_DATE [skip ci]"
+          git commit --allow-empty -m "Update Deck - $COMMIT_DATE"
           git push origin main
 
       - name: Deploy triggered
